@@ -1,0 +1,282 @@
+/* ================= ОБЩИЕ СТИЛИ ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    line-height: 1.6;
+    display: flex;
+}
+
+/* ================= БОКОВАЯ ПАНЕЛЬ ================= */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #111;
+    padding-top: 30px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.7);
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #ffae00;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 15px 25px;
+    color: #ccc;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav a:hover {
+    background-color: #1b1b1b;
+    border-left: 4px solid #ffae00;
+    color: #ffae00;
+}
+
+/* ================= КОНТЕНТ ================= */
+.content {
+    margin-left: 250px;
+    padding: 50px 60px;
+    flex: 1;
+}
+
+/* ========== HERO ================= */
+.hero-container {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(255, 0, 0, 0.514), rgb(0, 0, 0));
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.clan-logo {
+    width: 150px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.clan-logo:hover {
+    transform: scale(1.05);
+}
+
+.hero-container h1 {
+    color: #ffae00;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.hero-info p {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+.hero-info p strong {
+    color: #ffae00;
+}
+
+/* ================= СЕКЦИИ ================= */
+.container {
+    margin-bottom: 50px;
+}
+
+.container h2 {
+    font-size: 28px;
+    color: #ffae00;
+    border-left: 4px solid #ffae00;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+
+/* ========== КАРТОЧКИ / БЛОКИ ================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255,140,0,0.3);
+}
+
+.card h3 {
+    color: #ffae00;
+    margin-bottom: 12px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+/* ================= ЛИДЕРЫ ================= */
+.leaders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.leader {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ffae00;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.leader:hover {
+    transform: translateX(5px);
+    background-color: #222;
+}
+
+.commander { color: #ffae00; }
+.deputy { color: #ccc; }
+.officer { color: #bbb; }
+.junior { color: #aaa; }
+
+/* ================= ПРАВИЛА ================= */
+.rules {
+    background-color: #151515;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #222;
+}
+
+.rules h3 {
+    color: #ffae00;
+    margin-bottom: 12px;
+}
+
+.rules ul {
+    list-style: none;
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.rules li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.rules li::before {
+    content: "⚠";
+    position: absolute;
+    left: 0;
+    color: #ffae00;
+    font-weight: bold;
+}
+
+.highlight { color: #4cff88; font-weight: bold; }
+.important { color: #ffae00; font-weight: bold; }
+.danger { color: #ff4444; font-weight: bold; }
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #111;
+    color: #888;
+    font-size: 14px;
+    border-top: 2px solid #ffae00;
+}
+
+/* ================= СПЕЦИАЛЬНЫЙ КЛАСС KOMANDDDD ================= */
+.komandddd {
+    color: #ff4444;         /* Яркий красный цвет */
+    font-weight: bold;       /* Жирный шрифт для акцента */
+    background-color: #2b0000; /* Тёмный красный фон */
+    padding: 8px 12px;       /* Внутренние отступы */
+    border-radius: 6px;      /* Скругление углов */
+    display: inline-block;   /* Чтобы можно было вставлять в текст */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.komandddd:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 8px #ff4444;
+}
+
+/* ================= СПЕЦИАЛЬНЫЙ КЛАСС ZASTUP ================= */
+.zastup {
+    color: #ffae00;          /* Золотой цвет текста */
+    font-weight: bold;        /* Жирный для акцента */
+    background-color: #3a2a00; /* Тёмный золотой фон */
+    padding: 6px 10px;        /* Внутренние отступы */
+    border-radius: 5px;       /* Скругление углов */
+    display: inline-block;    /* Чтобы можно было вставлять в текст */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zastup:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 8px #ffae00;
+}
+
+/* ================= СПЕЦИАЛЬНЫЙ КЛАСС PIDROZDIL ================= */
+.pidrozdil {
+    color: #ffffff;           /* Белый текст */
+    font-weight: bold;         /* Жирный для акцента */
+    background-color: #2a2a2a; /* Тёмный фон для контраста */
+    padding: 6px 10px;         /* Внутренние отступы */
+    border-radius: 5px;        /* Скругление углов */
+    display: inline-block;     /* Чтобы можно было вставлять в текст */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pidrozdil:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 8px #ffffff;
+}
+
+/* ================= СПЕЦИАЛЬНЫЙ КЛАСС OFICER ================= */
+.oficer {
+    color: #4da6ff;           /* Яркий синий текст */
+    font-weight: bold;         /* Жирный для акцента */
+    background-color: #1a2a3a; /* Тёмный синий фон */
+    padding: 6px 10px;         /* Внутренние отступы */
+    border-radius: 5px;        /* Скругление углов */
+    display: inline-block;     /* Чтобы вставлять в текст */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.oficer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 8px #4da6ff;
+}
+
+/* ================= СПЕЦИАЛЬНЫЙ КЛАСС NAMECLANS ================= */
+.nameclans {
+    color: #4cff88;        /* Яркий зеленый цвет */
+    font-weight: bold;      /* Жирный текст */
+    font-size: 50px;        /* Можно регулировать размер */
+}

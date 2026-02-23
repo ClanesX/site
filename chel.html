@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[_FORT] — Учасники клану</title>
+<style>
+/* ================= ОБЩИЕ СТИЛИ ================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b0b0b;
+    color: #e0e0e0;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffae00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ================= СПИСОК ================= */
+ol {
+    counter-reset: participant;
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between; /* имя слева, звание по центру */
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Нумерация слева */
+li::before {
+    counter-increment: participant;
+    content: counter(participant) ". ";
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Имя слева */
+li .name {
+    text-align: left;
+    flex: 1;
+}
+
+/* Звание по центру */
+li .rank {
+    text-align: center;
+    flex: 1;
+}
+
+/* ================= РАНГИ ================= */
+.commander {
+    color: #ff4444;
+    background-color: #2b0000;
+    font-weight: bold;
+}
+.commander:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #ff4444;
+}
+
+.executive_officer {
+    color: #ffae00;
+    background-color: #3a2a00;
+    font-weight: bold;
+}
+.executive_officer:hover {
+    transform: rotate(-2deg);
+    box-shadow: 0 0 12px #ffae00;
+}
+
+.battle_officer {
+    color: #4cff88;
+    background-color: #0a2a0a;
+    font-weight: bold;
+}
+.battle_officer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px #4cff88;
+}
+
+.battle_officers {
+    color: #4cff88;
+    background-color: #00182e;
+    font-weight: bold;
+}
+.battle_officers:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px #fffc4c;
+}
+
+.junior_officer {
+    color: #4da6ff;
+    background-color: #1a2a3a;
+    font-weight: bold;
+}
+.junior_officer:hover {
+    transform: scale(1.03) rotate(1deg);
+    box-shadow: 0 0 12px #4da6ff;
+}
+
+.private_member {
+    color: #ffffff;
+    background-color: #2a2a2a;
+    font-weight: bold;
+}
+.private_member:hover {
+    transform: translateX(2px);
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.recruit {
+    color: #ff88ff;
+    background-color: #2a002a;
+    font-weight: bold;
+}
+.recruit:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 0 12px #ff88ff;
+}
+
+.midfielder {
+    color: #ff66cc;
+    background-color: #2a003a;
+    font-weight: bold;
+}
+.midfielder:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 10px #ff66cc;
+}
+</style>
+</head>
+<body>
+
+<h1>Учасники клану [_FORT]</h1>
+
+<ol>
+    <li class="commander"><span class="name">Nastya1tsg</span><span class="rank">Командувач I</span></li>
+    <li class="commander"><span class="name">Death_to_machines</span><span class="rank">Командувач II</span></li>
+    <li class="executive_officer"><span class="name">mistertvister777</span><span class="rank">Заст. командувача</span></li>
+    <li class="executive_officer"><span class="name">hunter___2002</span><span class="rank">Заст. командувача</span></li>
+    <li class="executive_officer"><span class="name">Rm_K80</span><span class="rank">Заст. командувача</span></li>
+    <li class="executive_officer"><span class="name">buburuzax_3981949</span><span class="rank">Заст. командувача</span></li>
+    <li class="battle_officers"><span class="name">PHANTOM_STEAL</span><span class="rank">Командир підрозділу</span></li>
+    <li class="battle_officer"><span class="name">Gray_Little_wolf</span><span class="rank">Бойовий офіцер</span></li>
+    <li class="battle_officer"><span class="name">Mr_Pr0r0k</span><span class="rank">Бойовий офіцер</span></li>
+    <li class="junior_officer"><span class="name">bazil_stalnoj</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">M_A_X__Kmitluvui</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">vxTheDarkLordxv</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">DEDKOVSK</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">boec18349</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">virus200010</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">FIRE_MEX</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">qwosinx</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">Kokc6</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">___S_p_E_C_t_r_E___</span><span class="rank">Молодший офіцер</span></li>
+    <li class="junior_officer"><span class="name">boss199991</span><span class="rank">Молодший офіцер</span></li>
+    <li class="private_member"><span class="name">Vlad_UA_Good</span><span class="rank">Приватний</span></li>
+    <li class="private_member"><span class="name">andrei_klebeka</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">ace_Valer_394</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">V0L0DbKA</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">Sanyakucher_accurate</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">Rydou2</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">iv1982an</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">KG_312</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">rom__560</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">Ukraine84</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">osobyi75</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">tramasir</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">RjabovJeka</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">MoPeJlb</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">revayan</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">Andruxa250</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">Corleone1990o</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">Aleksandrsavinskij471</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">KS_0109</span><span class="rank">Рекрут</span></li>
+    <li class="recruit"><span class="name">V_o2000</span><span class="rank">Рекрут</span></li>
+    <li class="midfielder"><span class="name">st_manager_ua</span><span class="rank">Півзахисник</span></li>
+    <li class="midfielder"><span class="name">vadim4979</span><span class="rank">Півзахисник</span></li>
+    <li class="midfielder"><span class="name">z0xS1</span><span class="rank">Півзахисник</span></li>
+</ol>
+
+</body>
+</html>
