@@ -1,1 +1,342 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[_FORT] Відео турнірів</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html, body{
+    height:100%;
+    background:#000;
+    color:#fff;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+/* КНОПКА НАЗАД */
+.home-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    background:red;
+    color:white;
+    padding:10px 18px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:6px;
+    z-index:1000;
+    transition:0.3s;
+}
+.home-btn:hover{
+    background:#b30000;
+    transform:scale(1.05);
+}
+
+/* ХЕДЕР */
+header{
+    text-align:center;
+    padding:40px 20px 10px;
+    border-bottom:2px solid red;
+}
+
+.clan-prefix{
+    color:red;
+    font-weight:bold;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 5px red; }
+    to{ text-shadow:0 0 20px red; }
+}
+
+h1{
+    font-size:32px;
+    margin-top:10px;
+}
+
+/* ОСНОВНОЙ КОНТЕНТ */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* ИНФО БЛОК СПРАВА */
+.info-box{
+    max-width:350px;
+    background:#111;
+    border:1px solid red;
+    padding:20px;
+    border-radius:10px;
+    position:absolute;
+    right:30px;
+    top:200px;
+    color:#ccc;
+}
+
+/* БОЛЬШОЙ БЛОК ВИДЕО */
+.video-section{
+    max-width:900px;
+    margin:0 auto;
+    background:#111;
+    border:2px solid red;
+    border-radius:12px;
+    padding:25px;
+}
+
+.video-title-main{
+    text-align:center;
+    font-size:26px;
+    margin-bottom:20px;
+    color:red;
+}
+
+/* СЛАЙДЕР */
+.slider{
+    position:relative;
+    overflow:hidden;
+}
+
+.slider-track{
+    display:flex;
+    transition:transform 0.5s ease;
+}
+
+.video-card{
+    min-width:100%;
+    padding:10px;
+}
+
+.video-wrapper{
+    background:#000;
+    border:1px solid #333;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+}
+
+video{
+    width:100%;
+    max-height:480px;
+    border-radius:8px;
+    background:black;
+}
+
+.video-meta{
+    margin-top:15px;
+}
+
+.video-name{
+    font-size:20px;
+    color:red;
+    margin-bottom:5px;
+}
+
+.video-date{
+    font-size:14px;
+    color:#aaa;
+}
+
+.no-video{
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;
+    font-size:22px;
+    border:2px dashed #444;
+    border-radius:10px;
+}
+
+/* КНОПКИ СЛАЙДЕРА */
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:red;
+    border:none;
+    color:white;
+    font-size:30px;
+    padding:10px 15px;
+    cursor:pointer;
+    border-radius:6px;
+    z-index:5;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.slider-btn:hover{
+    background:#b30000;
+}
+
+/* ФУТЕР */
+.footer{
+    width:100%;
+    background:#000;
+    text-align:center;
+    margin-top:40px;
+}
+
+.footer-line{
+    height:2px;
+    background:red;
+    width:100%;
+}
+
+.footer-text{
+    padding:20px;
+    color:#aaa;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="https://clanesx.github.io/site/" class="home-btn">⟵ На головний сайт</a>
+
+<header>
+    <h1><span class="clan-prefix">[_FORT]</span> НЕЗЛАМНИЙ БАХМУТ</h1>
+</header>
+
+<div class="main">
+
+    <div class="video-section">
+        <div class="video-title-main">Відео турнірів та стримів клану</div>
+
+        <div class="slider">
+            <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+            <button class="slider-btn next" onclick="nextSlide()">❯</button>
+
+            <div class="slider-track" id="sliderTrack">
+                <!-- ВИДЕО БУДУТЬ ДОДАВАТИСЯ СКРИПТОМ -->
+            </div>
+        </div>
+    </div>
+
+    <div class="info-box">
+        Кожен турнір або клановий стрим проходить ретельний контроль
+        на наявність контенту та адекватної лексики.<br><br>
+        Якщо будь-який пункт буде порушено —
+        запит на розміщення стриму буде відхилений.
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="footer-line"></div>
+    <div class="footer-text">
+        © 2026 [_FORT] — Усі права захищені<br>
+        Офіційний сайт клану у World of Tanks
+    </div>
+</footer>
+
+<script>
+/*
+====================================================
+ТУТ ТИ ДОДАЄШ ВІДЕО
+Якщо:
+src: ""  → блок буде показувати "Відео не зареєстроване"
+title: "" → назва не показується
+date: ""  → дата не показується
+====================================================
+*/
+
+const videos = [
+    {
+        src: "",
+        title: "",
+        date: ""
+    }
+    
+
+    // ПРИКЛАД:
+    // {
+    //   src: "stream1.mp4",
+    //   title: "Клановий турнір 7x7",
+    //   date: "2026"
+    // }
+];
+
+const track = document.getElementById("sliderTrack");
+
+videos.forEach(video => {
+    const card = document.createElement("div");
+    card.className = "video-card";
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "video-wrapper";
+
+    if(video.src === ""){
+        const noVid = document.createElement("div");
+        noVid.className = "no-video";
+        noVid.textContent = "Відео не зареєстроване";
+        wrapper.appendChild(noVid);
+    } else {
+        const vid = document.createElement("video");
+        vid.controls = true;
+        vid.src = video.src;
+        wrapper.appendChild(vid);
+    }
+
+    // МЕТА (назва і дата — тільки якщо заповнені)
+    if(video.title !== "" || video.date !== ""){
+        const meta = document.createElement("div");
+        meta.className = "video-meta";
+
+        if(video.title !== ""){
+            const title = document.createElement("div");
+            title.className = "video-name";
+            title.textContent = video.title;
+            meta.appendChild(title);
+        }
+
+        if(video.date !== ""){
+            const date = document.createElement("div");
+            date.className = "video-date";
+            date.textContent = "Дата: " + video.date;
+            meta.appendChild(date);
+        }
+
+        wrapper.appendChild(meta);
+    }
+
+    card.appendChild(wrapper);
+    track.appendChild(card);
+});
+
+let currentSlide = 0;
+
+function updateSlider(){
+    track.style.transform = "translateX(-" + (currentSlide * 100) + "%)";
+}
+
+function nextSlide(){
+    if(currentSlide < videos.length - 1){
+        currentSlide++;
+        updateSlider();
+    }
+}
+
+function prevSlide(){
+    if(currentSlide > 0){
+        currentSlide--;
+        updateSlider();
+    }
+}
+</script>
+
+</body>
+</html>
