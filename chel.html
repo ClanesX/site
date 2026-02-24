@@ -136,6 +136,36 @@ li .rank {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 0 10px #ff66cc;
 }
+
+.battle_officer2 {
+    color: #00e6ff;
+    background: linear-gradient(90deg, #001f2e, #003b4a);
+    font-weight: bold;
+    border: 1px solid #00e6ff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Светящаяся полоска */
+.battle_officer2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, #00e6ff55, transparent);
+    transition: 0.5s;
+}
+
+.battle_officer2:hover::after {
+    left: 100%;
+}
+
+.battle_officer2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00e6ff, 0 0 25px #0077ff;
+}
 </style>
 </head>
 <body>
@@ -154,7 +184,7 @@ li .rank {
     <li class="battle_officers"><span class="name">PHANTOM_STEAL</span><span class="rank">Командир підрозділу</span></li>
     <li class="battle_officer"><span class="name">Gray_Little_wolf</span><span class="rank">Бойовий офіцер</span></li>
     <li class="battle_officer"><span class="name">Mr_Pr0r0k</span><span class="rank">Бойовий офіцер</span></li>
-    <li class="battle_officer"><span class="name">KS_0109</span><span class="rank">Офіцер штабу</span></li>
+    <li class="battle_officer2"><span class="name">KS_0109</span><span class="rank">Офіцер штабу</span></li>
 
     <li class="junior_officer"><span class="name">bazil_stalnoj</span><span class="rank">Молодший офіцер</span></li>
     <li class="junior_officer"><span class="name">M_A_X__Kmitluvui</span><span class="rank">Молодший офіцер</span></li>
@@ -179,5 +209,6 @@ li .rank {
 </body>
 
 </html>
+
 
 
